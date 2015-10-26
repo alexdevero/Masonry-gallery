@@ -2,14 +2,12 @@
 @function remy($value) {
   @return ($value / 16px) *1rem;
 }
-
 /**
  * Base styles
  */
 body {
   font: 100% / 1.414 "Poiret One", "Roboto", sans-serif;
 }
-
 /**
  * Layout styles
  */
@@ -17,7 +15,6 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-
 /**
  * Button component
  */
@@ -38,7 +35,6 @@ header {
     border-color: #fff;
   }
 }
-
 /**
  * Grid styles
  */
@@ -66,12 +62,13 @@ header {
   border-radius: remy(4px);
   overflow: hidden;
 }
+.grid__item--high,
+.grid__item--high img {height: rem(480px);}
 img {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
-
 /**
  * Link styles
  */
