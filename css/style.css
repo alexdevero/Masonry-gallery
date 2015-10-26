@@ -55,17 +55,25 @@ header {
 .item__overlay:focus > button, .item__overlay:hover > button {
   opacity: 1;
 }
+
 .grid__sizer,
 .grid__item {
   position: relative;
   width: 20%;
   min-width: 16.25rem;
 }
+
 .grid__item {
   margin-bottom: .9375rem;
   border-radius: 0.25rem;
   overflow: hidden;
 }
+
+.grid__item--high,
+.grid__item--high img {
+  height: 480px;
+}
+
 img {
   width: 100%;
   max-width: 100%;
@@ -87,6 +95,7 @@ a:focus, a:hover,
   text-decoration: none;
   color: #666;
 }
+
 .active .fa {
   color: #f62459;
-} 
+}
