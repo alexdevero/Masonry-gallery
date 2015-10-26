@@ -1,0 +1,88 @@
+// Remy function
+@function remy($value) {
+  @return ($value / 16px) *1rem;
+}
+
+/**
+ * Base styles
+ */
+body {
+  font: 100% / 1.414 "Poiret One", "Roboto", sans-serif;
+}
+
+/**
+ * Layout styles
+ */
+header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/**
+ * Button component
+ */
+.btn {
+  position: relative;
+  top: 0;
+  margin-top: 50%;
+  opacity: 0;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: remy(35px);
+  transform: translateY(-50%);
+  transition: all .25s ease-in-out;
+  &:focus,
+  &:hover {
+    color: #111;
+    background-color: #fff;
+    border-color: #fff;
+  }
+}
+
+/**
+ * Grid styles
+ */
+.item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#111, .45);
+  transition: background-color .55s ease-in-out;
+  &:focus,
+  &:hover {background-color: rgba(#111, .05);}
+  &:focus > button,
+  &:hover > button {opacity: 1;}
+}
+.grid__sizer,
+.grid__item {
+  position: relative;
+  width: 20%;
+  min-width: remy(260px);
+}
+.grid__item {
+  margin-bottom: .9375rem;
+  border-radius: remy(4px);
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Link styles
+ */
+a,
+.fa {
+  color: #bbb;
+  transition: color .25s ease-in-out;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: #666;
+  }
+}
+.active .fa {color: #f62459;}
