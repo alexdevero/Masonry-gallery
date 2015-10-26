@@ -8,11 +8,11 @@
   });
   // Image replacement handler
   $(document).on("click", ".js-button", function() {
-    var imageSrc = $(this).parents(".grid__item").find("img").attr("src"),
-        modalImgSrc = $(".js-modal-image").attr("src", imageSrc),
-        donwloadLink = $(".js-download").attr("href", imageSrc);
+    var imageSrc = $(this).parents(".grid__item").find("img").attr("src");
+    $(".js-download").attr("href", imageSrc);
+    $(".js-modal-image").attr("src", imageSrc);
     $(document).on("click", ".js-heart", function() {
       $(this).toggleClass("active");
     });
   });
-})()
+})();
